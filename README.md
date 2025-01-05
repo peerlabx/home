@@ -1,2 +1,2 @@
-# home
-Test
+# HOME
+Test page. Thanks for visting.
