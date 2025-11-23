@@ -4,9 +4,9 @@
 # Tested in Ubuntu 24.04(LTS)x64 1GB Memory 25GB Disk
 
 # Install dependancies
-echo "*** SETTING UP XEQ TestNet ***";
-echo "*** CTRL-C TO EXIT ***";
-echo " ";
+echo "*** SETTING UP XEQ TestNet ***"
+echo "*** CTRL-C TO EXIT ***"
+echo " "
 
 mkdir XEQ-Testnet
 sudo apt update
