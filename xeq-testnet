@@ -4,9 +4,9 @@
 # Tested in Ubuntu 24.04(LTS)x64 1GB Memory 25GB Disk
 
 # Run it from a node with these three commands
-# $ wget https://raw.githubusercontent.com/peerlabx/home/main/xeq-testnet
-# $ sudo chmod 755 xeq-testnet
-# $ ./xeq-testnet
+# wget https://raw.githubusercontent.com/peerlabx/home/main/xeq-testnet
+# sudo chmod 755 xeq-testnet
+# ./xeq-testnet
 
 # Install dependancies
 echo "*** SETTING UP XEQ TestNet ***"
