@@ -1,0 +1,28 @@
+# !/bin/bash
+# 11-23-2025
+# Install XEQ Testnet Digital Ocean and Vultr
+# Tested in Ubuntu 24.04(LTS)x64 1GB Memory 25GB Disk 
+
+# Install dependancies
+echo "*** SETTING UP XEQ TestNet ***"
+echo "*** CTRL-C TO EXIT ***"
+echo " "
+
+mkdir XEQ-Testnet
+sudo apt update
+sudo apt install -y docker.io docker-compose
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+docker --version
+
+# Pull docker image
+echo "Pulling Docker Image"
+docker pull glutinous165/equilibria-node:latest
+
+# Start docker
+cd /root/XEQ-Testnet
+docker stop regular1; docker rm regular1
+docker run -dit --name regular1 --restart unless-stopped --network host -v "$(pwd)/data/regular1:/data" glutinous165/equilibria-node:latest --testnet --data-dir=/data --p2p-bind-port=18150 --rpc-bind-port=18151 --add-exclusive-node=84.247.143.210:18080 --log-level=1; docker logs -f regular1
+
+# END
